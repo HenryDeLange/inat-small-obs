@@ -1,0 +1,34 @@
+<style type="text/css" media="screen">
+.inat-widget { font-family: Georgia, serif; padding: 10px; line-height: 1;}
+.inat-widget td {vertical-align: middle;}
+.inat-title { color: #333; font-weight: bold }
+.inat-label { color: #555; }
+.inat-value { color: #444; }
+.inat-meta { font-size: smaller; margin-top: 2px; line-height: 1.2;}
+.inat-observation-image img { vertical-align: middle; text-align: center; display: inline-block; }
+.inat-observation-image { display:block; float: left; margin: 3;}
+.inat-title, .inat-label, .inat-value { font-family: "Trebuchet MS", Arial, sans-serif; }
+.inat-widget td.inat-details {vertical-align: middle; padding-left: 8px;}
+</style>
+<div class="inat-widget">
+    <table>
+        <tr>
+            <td rowspan="3">
+                <a href="{img_href}">
+                    <img id="photo" class="inat-observation-image" border="0" title="Observation Photo" alt="Square" src="{img_src}" />
+                </a>
+            </td>
+            <td class="inat-details" colspan="2">
+                <a class="inat-title" href="{obs_href}">{title}</a>
+            </td>
+        </tr>
+        <tr>
+            <td class="inat-details"><div class="inat-meta inat-label">Date: </div></td>
+            <td class="inat-details"><div class="inat-meta inat-value">{date}</div></td>
+        </tr>
+        <tr>
+            <td class="inat-details"><div class="inat-meta inat-label">Place: </div></td>
+            <td class="inat-details"><div class="inat-meta inat-value">{place}</div></td>
+        </tr>
+    </table>
+</div>
