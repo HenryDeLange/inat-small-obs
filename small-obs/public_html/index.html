@@ -9,22 +9,26 @@
               integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     </head>
     <body>
-        <div class="jumbotron jumbotron-fluid">
+        <!--Title Section-->
+        <div class="jumbotron jumbotron-fluid" style='background-color: #E1ECF7;'>
             <div class="container">
                 <h1 class="display-4">Small Observations</h1>
                 <p class="lead">
-                    Generate a small HTML widget of the observation specified by the Observation ID or URL from the iNaturalist.org web site.
+                    Generate a small HTML widget based on an observation from the iNaturalist.org web site.
+                    <br />
+                    <small class='font-weight-light'>Provide either the observation's ID or URL, and then press the 'Generate' button.</small>
                 </p>
             </div>
         </div>
+        <!--Input Section-->
         <div className="container">
             <div class="row">
                 <div class="input-group w-50 mx-auto input-group-lg">
                     <input id="observation" type="text" aria-describedby="inputGroup-sizing-lg"
-                           class="form-control" style="min-width: 240px;" 
+                           class="form-control font-weight-bold" style="min-width: 240px;" 
                            placeholder="iNaturalist Observation" aria-label="Observation"/>
                     <div class="input-group-append">
-                        <button class="btn btn-outline-primary" type="button" 
+                        <button class="btn btn-outline-primary font-weight-bold" type="button" 
                                 onclick="doGenerateClick()">
                             Generate
                         </button>
@@ -32,9 +36,40 @@
                 </div>
             </div>
         </div>
-
-<!--TODO: Add some options to customize how the widget will look.-->
-
+        <!--Options Section-->
+        <div class="w-50 mx-auto">
+            <hr />
+            <h3><small>Options:</small></h3>
+            <div class="input-group mb-3" style="margin-top: 15px;">
+                <div class="input-group-prepend">
+                  <label class="input-group-text" style="min-width: 80px;" for="optionsMode">Mode</label>
+                </div>
+                <select class="custom-select" id="optionsMode">
+                  <option value="static">Static Content</option>
+                  <option value="dynamic">Dynamic Content</option>
+                </select>
+            </div>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend" >
+                  <label class="input-group-text" style="min-width: 80px;" for="optionsSize">Size</label>
+                </div>
+                <select class="custom-select" id="optionsSize">
+                  <option value="small">Small Size</option>
+                  <option value="medium">Medium Size</option>
+                  <!--<option value="large">Large Size</option>-->
+                </select>
+            </div>
+<!--            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <label class="input-group-text" style="min-width: 80px;" for="optionsDetails">Details</label>
+                </div>
+                <select class="custom-select" id="optionsDetails">
+                  <option value="less">Less Details</option>
+                  <option value="more">More Details</option>
+                </select>
+            </div>-->
+        </div>
+        <!--Preview Section-->
         <div id="PanelResult" style="display: none">
             <hr />
             <div class="card">
