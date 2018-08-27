@@ -109,6 +109,7 @@
                         htmlTemplate = htmlTemplate.replace('{title}', 'unknown');
                     }
                     htmlTemplate = htmlTemplate.replace('{date}', obsData.observed_on);
+                    htmlTemplate = htmlTemplate.replace('{username}', obsData.user.name);
                     htmlTemplate = htmlTemplate.replace('{place}', obsData.place_guess);
                     // Show the small observation on the screen
                     document.getElementById('widget').innerHTML = htmlTemplate;

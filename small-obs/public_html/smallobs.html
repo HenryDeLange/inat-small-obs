@@ -9,6 +9,7 @@
 .inat-observation-image { display:block; float: left; margin: 3;}
 .inat-title, .inat-label, .inat-value { font-family: "Trebuchet MS", Arial, sans-serif; }
 .inat-widget td.inat-details {vertical-align: top; padding-left: 8px; padding-top: 3px;}
+td.inat-details-right {text-align: right;}
 </style>
 <div class="inat-widget">
     <table>
@@ -18,17 +19,19 @@
                     <img id="photo" class="inat-observation-image" border="0" title="Observation Photo" alt="Observation Photo" src="{img_src}" />
                 </a>
             </td>
-            <td class="inat-details" colspan="2">
+            <td class="inat-details" colspan="4">
                 <a class="inat-title" href="{obs_href}">{title}</a>
             </td>
         </tr>
         <tr>
             <td class="inat-details"><div class="inat-meta inat-label">Date: </div></td>
             <td class="inat-details"><div class="inat-meta inat-value">{date}</div></td>
+            <td class="inat-details inat-details-right"><div class="inat-meta inat-label">Observer: </div></td>
+            <td class="inat-details"><div class="inat-meta inat-value">{username}</div></td>
         </tr>
         <tr>
-            <td class="inat-details"><div class="inat-meta inat-label">Place: </div></td>
-            <td class="inat-details"><div class="inat-meta inat-value">{place}</div></td>
+            <td class="inat-details" colspan="1"><div class="inat-meta inat-label">Place: </div></td>
+            <td class="inat-details" colspan="3"><div class="inat-meta inat-value">{place}</div></td>
         </tr>
     </table>
 </div>
